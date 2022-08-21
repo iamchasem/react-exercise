@@ -7,19 +7,19 @@
   overflow: auto;
 }
 
-.sidebar a {
+.navlink {
   display: block;
   color: black;
   padding: 16px;
   text-decoration: none;
 }
 
-.sidebar a.active {
+.navlink.active {
   background-color: #aaa;
   color: white;
 }
 
-.sidebar a:hover:not(.active) {
+.navlink:hover:not(.active) {
   background-color: #555;
   color: white;
 }
@@ -30,7 +30,7 @@
     height: auto;
     position: relative;
   }
-  .sidebar a {
+  .navlink {
     float: left;
   }
   div.content {
@@ -39,7 +39,7 @@
 }
 
 @media screen and (max-width: 400px) {
-  .sidebar a {
+  .navlink {
     text-align: center;
     float: none;
   }

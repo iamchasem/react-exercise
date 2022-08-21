@@ -1,13 +1,13 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { HomePage } from "./pages";
-import { ListPage } from "./pages";
+import { HomePage, FilmsPage, SingleFilmPage } from "./pages";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/tasks" element={<ListPage />} />
+        <Route path="films" element={<FilmsPage />} />
+        <Route path="films/:id" element={<SingleFilmPage />} />
       </Routes>
     </BrowserRouter>
   );

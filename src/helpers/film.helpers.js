@@ -11,10 +11,9 @@ export function getFilmStats(list) {
       stats.acc_score += Number(item.rt_score);
       stats.avg_score = stats.acc_score / stats.total;
 
-      if (stats.latest) {
-        stats.latest =
-          stats.latest < item.release_date ? item.release_date : stats.latest;
-      } else stats.latest = item.release_date;
+      if (stats.latest == null || stats.latest < film.release_date) {
+        stats.latest = film.release_date;
+      }
 
       return stats;
     },
